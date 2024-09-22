@@ -1,0 +1,39 @@
+--Attendance trends over time
+
+SELECT
+    EXTRACT(MONTH FROM PARSE_DATE('%a %b %d %Y', Date)) AS month,
+    AVG(attendance) AS avg_attendance
+FROM `Schedule.Results`
+GROUP BY month
+ORDER BY month;
+
+--Effect of Game Start Time on Attendance
+
+SELECT
+    Start,
+    AVG(attendance) AS avg_attendance
+FROM `nba-stats-435309.Schedule.Results`
+GROUP BY Start
+ORDER BY avg_attendance DESC;
+
+--NBA team with the highest average home game attendance
+
+SELECT  
+    home AS team_name,
+    AVG(attendance) AS avg_attendance
+ FROM `nba-stats-435309.Schedule.Results`
+GROUP BY home
+ORDER BY avg_attendance DESC;
+
+
+--Highest attendance game
+
+SELECT  
+    Date,
+    home,
+    visitor,
+    attendance,
+    Arena
+FROM `nba-stats-435309.Schedule.Results`
+ORDER BY attendance DESC
+LIMIT 10;
