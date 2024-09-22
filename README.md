@@ -16,7 +16,7 @@ This analysis identifies periods of higher and lower game attendance throughout 
 
 I explored how game start times influence attendance, comparing afternoon and evening games to determine if timing impacts fan turnout.
 
-- Games starting at 12:30 PM had the highest average attendance, indicating that earlier games may attract more fans.
+- Games starting at 12:30 PM (Eastern Time) had the highest average attendance, indicating that earlier games may attract more fans.
 
   ![ed2t4yxoy2ajq5dko577](https://github.com/user-attachments/assets/305307a8-93dd-42a4-bc18-c4c1e6fc756c)
 
